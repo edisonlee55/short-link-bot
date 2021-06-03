@@ -7,6 +7,7 @@ A telegram short link bot hosting on [Cloudflare Workers](https://workers.cloudf
 | Variable         | Description                                                   |
 |------------------|---------------------------------------------------------------|
 | BOT_TOKEN        | Telegram bot token                                            |
+| BOT_OWNERS_ID    | Telegram bot owners user ID (separate with `,`)               |
 | DOMAIN           | Your short.io domain                                          |
 | SHORT_IO_API_KEY | Your short.io PUBLIC key                                      |
 | WEBHOOK          | Your webhook secure path, using a random UUID is recommended. |
@@ -21,6 +22,7 @@ wrangler init
 # Append `webpack_config = "webpack.config.js"` to wrangler.toml here.
 
 wrangler secret put BOT_TOKEN
+wrangler secret put BOT_OWNERS_ID
 wrangler secret put DOMAIN
 wrangler secret put SHORT_IO_API_KEY
 wrangler secret put WEBHOOK
